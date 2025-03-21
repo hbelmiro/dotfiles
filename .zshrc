@@ -36,18 +36,6 @@ ZSH_THEME="robbyrussell"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Aliases
-alias python=python3
-alias byaml="bat -l yaml"
-alias k=kubectl
-kdef() {
-  kubectl get "$@" -o yaml | yq .
-}
-
-kdefb() {
-  kdef "$@" | byaml
-}
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -130,10 +118,22 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias python=python3
+
+if [[ -t 1 ]]; then
+    # If running interactively
+
+    alias byaml="bat -l yaml"
+    alias k=kubectl
+    kdef() {
+      kubectl get "$@" -o yaml | yq .
+    }
+
+    kdefb() {
+      kdef "$@" | byaml
+    }
+fi
 
 
 export GPG_TTY=$(tty)
