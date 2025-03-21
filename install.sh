@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-ln -s ~/dotfiles/.zshrc ~/.zshrc
+set -e
+
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
