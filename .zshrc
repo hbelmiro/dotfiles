@@ -126,15 +126,15 @@ if [[ -t 1 ]]; then
 
     alias byaml="bat -l yaml"
     alias k=kubectl
-    kdef() {
-      kubectl get "$@" -o yaml | yq .
-    }
-
-    kdefb() {
-      kdef "$@" | byaml
-    }
 fi
 
+kdef() {
+  kubectl get "$@" -o yaml | yq .
+}
+
+kdefb() {
+  kdef "$@" | byaml
+}
 
 export GPG_TTY=$(tty)
 
