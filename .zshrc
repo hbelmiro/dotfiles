@@ -127,16 +127,16 @@ if [[ -t 1 ]]; then
     # If running interactively
 
     alias byaml="bat -l yaml"
-    alias k=kubectl
+    alias kubectl=kubecolor
+    alias k=kubecolor
 fi
 
 kdef() {
   kubectl get "$@" -o yaml | yq .
 }
 
-kdefb() {
-  kdef "$@" | byaml
-}
+# Make "kubecolor" borrow the same completion logic as "kubectl"
+compdef kubecolor=kubectl
 
 export GPG_TTY=$(tty)
 
