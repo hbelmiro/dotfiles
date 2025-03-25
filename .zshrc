@@ -138,6 +138,11 @@ kdef() {
 # Make "kubecolor" borrow the same completion logic as "kubectl"
 compdef kubecolor=kubectl
 
+# Kubecolor customization
+NOT_SO_WHITE="251"
+export KUBECOLOR_THEME_BASE_INFO="${NOT_SO_WHITE}"
+export KUBECOLOR_THEME_TABLE_HEADER="${NOT_SO_WHITE}:bold"
+
 export GPG_TTY=$(tty)
 
 . "$HOME/.local/bin/env"
