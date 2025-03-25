@@ -135,6 +135,10 @@ kdef() {
   kubectl get "$@" -o yaml | yq .
 }
 
+kdefb() {
+  kubectl get "$@" -o yaml | bat -l yaml
+}
+
 # Make "kubecolor" borrow the same completion logic as "kubectl"
 compdef kubecolor=kubectl
 
