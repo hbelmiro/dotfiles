@@ -9,12 +9,9 @@ export PATH=${PATH}:/Users/hbelmiro/dev/hbelmiro/private-scripts
 export PATH=${PATH}:/Users/hbelmiro/sdk/java/current/Contents/Home/bin
 export PATH=${PATH}:/Users/hbelmiro/sdk/maven/apache-maven-3.9.9/bin
 export PATH=${PATH}:/Applications/infinispan-cli
-export PATH=${PATH}:$(go env GOPATH)/bin
 
 export JAVA_HOME=/Users/hbelmiro/sdk/java/current/Contents/Home
 export GRAALVM_HOME=/Users/hbelmiro/sdk/graalvm/current/Contents/Home
-
-export GOROOT=$(go env GOROOT)
 
 # DSP
 export DSPO_NS=opendatahub
