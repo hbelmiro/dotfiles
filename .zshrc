@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-export PATH=${PATH}:/Users/hbelmiro/sdk/go1.21.13/bin
+export PATH=${PATH}:/Users/hbelmiro/go/bin
 export PATH=${PATH}:/Users/hbelmiro/sdk/oc
 export PATH=${PATH}:/Applications/kgrep
 export PATH=${PATH}:/Users/hbelmiro/dev/hbelmiro/bin
