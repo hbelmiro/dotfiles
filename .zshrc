@@ -118,6 +118,12 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 
+# alias for podman and docker defined as symbolic links
+# ➜  ~ ls -l /usr/local/bin/podman
+# lrwxr-xr-x@ 1 root  wheel  20 10 Abr 16:28 /usr/local/bin/podman -> /usr/local/bin/finch
+# ➜  ~ ls -l /usr/local/bin/docker
+# lrwxr-xr-x@ 1 root  wheel  20 10 Abr 16:28 /usr/local/bin/docker -> /usr/local/bin/finch
+
 alias python=python3
 
 if [[ -t 1 ]]; then
