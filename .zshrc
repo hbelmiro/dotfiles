@@ -145,6 +145,9 @@ kdefb() {
 # Make "kubecolor" borrow the same completion logic as "kubectl"
 compdef kubecolor=kubectl
 
+# Homebrew
+export HOMEBREW_NO_ENV_HINTS=true
+
 # Kubecolor customization
 NOT_SO_WHITE="251"
 export KUBECOLOR_THEME_BASE_INFO="${NOT_SO_WHITE}"
