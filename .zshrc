@@ -148,6 +148,13 @@ compdef kubecolor=kubectl
 # Homebrew
 export HOMEBREW_NO_ENV_HINTS=true
 
+# Docker BuildKit - Run the following commands to install and configure BuildKit
+# brew install buildkit
+# brew install docker-buildx
+# mkdir -p ~/.docker/cli-plugins
+# ln -sfn "$(brew --prefix)/opt/docker-buildx/bin/docker-buildx" ~/.docker/cli-plugins/docker-buildx
+export DOCKER_BUILDKIT=1
+
 # Kubecolor customization
 NOT_SO_WHITE="251"
 export KUBECOLOR_THEME_BASE_INFO="${NOT_SO_WHITE}"
